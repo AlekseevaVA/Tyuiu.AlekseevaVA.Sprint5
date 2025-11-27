@@ -5,19 +5,27 @@ using Tyuiu.AlekseevaVA.Sprint5.Task7.V21.Lib;
 namespace Tyuiu.AlekseevaVA.Sprint5.Task7.V21.Test
 {
     [TestClass]
-  
+
     public sealed class DataServiceTest
     {
         [TestMethod]
         public void CheckedExistsFile()
         {
+            string path = @"C:\Users\виктория\Desktop\DataSprint5\InPutDataFileTask7V21.txt";
+
+            FileInfo fileinfo = new FileInfo(path);
+            bool fileexists = fileinfo.Exists;
+            Assert.AreEqual(true, fileexists);
+        }
+
+        [TestMethod]
+        public void CheckedExistsOutPutFile()
+        {
             string path = @"C:\Users\виктория\Desktop\DataSprint5\OutPutDataFileTask7V21.txt";
 
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-
-            Assert.AreEqual(true, fileExists);
-
+            FileInfo fileinfo = new FileInfo(path);
+            bool fileexists = fileinfo.Exists;
+            Assert.AreEqual(true, fileexists);
         }
     }
 }

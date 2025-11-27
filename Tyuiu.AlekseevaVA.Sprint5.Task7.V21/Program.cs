@@ -1,4 +1,5 @@
-﻿using Tyuiu.AlekseevaVA.Sprint5.Task7.V21.Lib;
+﻿using System.IO;
+using Tyuiu.AlekseevaVA.Sprint5.Task7.V21.Lib;
 
 namespace Tyuiu.AlekseevaVA.Sprint5.Task7.V21;
 
@@ -22,13 +23,15 @@ internal class Program
         Console.WriteLine("***************************************************************************");
 
         string path = @"C:\Users\виктория\Desktop\DataSprint5\InPutDataFileTask7V21.txt";
-        string pathSaveFile = @"C:\Users\виктория\Desktop\DataSprint5\OutPutDataFileTask7V21.txt";
+        
 
         Console.WriteLine("Данные находятся в файле: " + path);
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-        pathSaveFile = ds.LoadDataAndSave(path);
+        Console.WriteLine("Находится в файле: ");
+        string pathSaveFile = ds.LoadDataAndSave(path);
+
         Console.WriteLine(pathSaveFile);
 
         Console.ReadKey();

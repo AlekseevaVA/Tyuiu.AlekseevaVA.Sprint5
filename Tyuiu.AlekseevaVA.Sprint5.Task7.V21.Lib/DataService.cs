@@ -9,7 +9,7 @@ namespace Tyuiu.AlekseevaVA.Sprint5.Task7.V21.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string pathSaveFile = @"C:\Users\виктория\Desktop\DataSprint5\OutPutDataFileTask7V21.txt";
+            string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V21.txt");
 
             FileInfo fileInfo = new FileInfo(pathSaveFile);
             bool fileExists = fileInfo.Exists;
